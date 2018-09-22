@@ -45,14 +45,11 @@ namespace VLCRP
                 client.Invoke();
                 Thread.Sleep(15000); // sleep for 15s
             }
-
-            client.Dispose();
-            Console.WriteLine("Discord RPC shut down.");
         }
 
         protected void CtrlC(object sender, ConsoleCancelEventArgs args)
         {
-            Console.WriteLine("Exiting");
+            Console.WriteLine("Quitting...");
             client.Dispose();
             running = false;
         }
